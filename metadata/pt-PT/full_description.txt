@@ -1,0 +1,9 @@
+Uma ferramenta simples que permite compartilhar mídia e texto com outro perfil de usuário do Android tão facilmente quanto encaminhar para outro aplicativo.
+
+Os perfis de usuário do Android permitem isolar aplicativos, possibilitando que usuários mantenham aplicativos sensíveis separados dos menos confiáveis. Nenhum perfil pode acessar os aplicativos, dados ou arquivos de outro perfil, mas isso também significa que não há uma maneira fácil para os usuários de diferentes perfis trocarem informações.
+
+Com este aplicativo, você pode selecionar quais informações deseja compartilhar com outros perfis no mesmo dispositivo. Notificações sobre os dados compartilhados serão exibidas nos outros perfis, permitindo baixar, compartilhar ou copiar do perfil onde os dados estão localizados.
+
+Toda a comunicação entre perfis acontece localmente sem necessidade de conexão com a Internet, uso de servidores ou envolvimento de serviços de terceiros.
+
+Sem anúncios. Sem rastreamento. Sem compras no aplicativo. Software livre de código aberto.

@@ -1,0 +1,4 @@
+* Share Links, Files, and Text across Android User Profiles
+* Share Files or Links from other Applications to this App to share them with other User Profiles
+* Share Clip Board contents across Android User Profiles
+* Inter-Profile communication can optionally be encrypted (AES with key derived from a Password set in this App in both profiles)

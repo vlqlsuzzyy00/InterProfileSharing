@@ -1,0 +1,9 @@
+Un outil simple qui permet de partager des médias et du texte avec un autre profil utilisateur Android aussi facilement que de les transférer à une autre application.
+
+Les profils utilisateurs Android permettent d'isoler les applications, permettant aux utilisateurs de séparer les applications sensibles des applications moins fiables. Aucun profil ne peut accéder aux applications, aux données ou aux fichiers d'un autre profil, ce qui signifie également qu'il n'existe pas de moyen simple pour les utilisateurs des différents profils d'échanger des informations.
+
+Avec cette application, vous pouvez sélectionner les informations que vous souhaitez partager avec d'autres profils sur le même appareil. Des notifications concernant les données partagées s'afficheront dans les autres profils, permettant de les télécharger, les partager ou les copier depuis le profil source.
+
+Toute la communication entre les profils s'effectue localement sans connexion Internet, sans serveur et sans intervention de services tiers.
+
+Pas de publicité. Pas de traçage. Pas d'achats intégrés. Logiciel libre et open source.

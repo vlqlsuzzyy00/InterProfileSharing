@@ -1,0 +1,9 @@
+Ein einfaches Tool, mit dem Sie Medien und Text so leicht mit einem anderen Android-Benutzerprofil teilen können wie das weiterleiten an eine andere App.
+
+Android-Benutzerprofile ermöglichen die Isolierung von Apps, sodass Nutzer sensible Anwendungen von weniger vertrauenswürdigen trennen können. Kein Profil kann auf die Apps, App-Daten oder Dateien eines anderen Profils zugreifen, was allerdings auch bedeutet, dass es für Benutzer verschiedener Profile keine einfache Möglichkeit gibt, Informationen auszutauschen.
+
+Mit dieser App können Sie auswählen, welche Informationen Sie mit anderen Profilen auf demselben Gerät teilen möchten. In den anderen Profilen werden Benachrichtigungen über die geteilten Daten angezeigt, die es ermöglichen, diese aus dem Quellprofil herunterzuladen, weiterzuleiten oder zu kopieren.
+
+Die gesamte Kommunikation zwischen den Profilen erfolgt lokal ohne Internetverbindung, ohne Server und ohne Beteiligung von Drittanbietern.
+
+Keine Werbung. Kein Tracking. Keine In-App-Käufe. Freie Open-Source-Software.

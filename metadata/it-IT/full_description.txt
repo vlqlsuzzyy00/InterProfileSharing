@@ -1,0 +1,9 @@
+Un semplice strumento per condividere contenuti con altri profili utente Android, con la stessa facilità di condividerli con un'altra app.
+
+I profili utente di Android permettono di isolare le app, consentendo di separare le applicazioni sensibili da quelle meno affidabili. Nessun profilo può accedere alle app, ai dati o ai file di un altro profilo, ma questo significa anche che non esiste un modo semplice per scambiare informazioni tra i profili.
+
+Con questa app puoi scegliere quali contenuti condividere con altri profili sullo stesso dispositivo. Le notifiche dei contenuti condivisi appariranno negli altri profili, permettendo di scaricarli, condividerli o copiarli dal profilo di origine.
+
+Tutta la comunicazione tra i profili avviene localmente senza connessione Internet, senza server e senza servizi di terze parti.
+
+Niente pubblicità. Niente tracciamento. Niente acquisti in-app. Software open source gratuito.

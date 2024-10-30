@@ -1,3 +1,5 @@
+<img src="./metadata/en-US/images/featureGraphic.jpg">
+
 # Inter Profile Sharing
 
 This is a purposefully simple, native App that allows forwarding media and text to another Android User Profile as easily as sharing it with another App.
@@ -6,11 +8,11 @@ No complicated setup. No fancy hacks. Well-established dependencies. Free Open S
 
 Although this App will run on any Android 14+ phone, it was designed and tested for GrapheneOS which comes with various [**improvements to Android's User Profiles**](https://grapheneos.org/features#improved-user-profiles). They allow isolating Apps from each other such that users are able to keep sensitive Applications separate from less trustworthy ones. Although GrapheneOS encourages their use, so much so that they raised the limit from 4 to 32 profiles per device, actually using them can be quite inconvenient. This App attempts to alleviate the arguably biggest pain point: The isolation of the file system between profiles, which requires less than optimal methods to bypass such as using USB Sticks, 3rd party Cloud Synchronization or Messaging Apps to move files between profiles.
 
-<a href="./assets/main-activity.png" target="_blank"><img src="./assets/main-activity.png" width="270"></a>
-<a href="./assets/settings-activity.png" target="_blank"><img src="./assets/settings-activity.png" width="270"></a>
-<a href="./assets/share-from-gallery.png" target="_blank"><img src="./assets/share-from-gallery.png" width="270"></a>
-<a href="./assets/server-notification.png" target="_blank"><img src="./assets/server-notification.png" width="270"></a>
-<a href="./assets/client-notifications.png" target="_blank"><img src="./assets/client-notifications.png" width="270"></a>
+<a href="./metadata/en-US/images/phoneScreenshots/screenshot-main-activity.png" target="_blank"><img src="./metadata/en-US/images/phoneScreenshots/screenshot-main-activity.png" width="270"></a>
+<a href="./metadata/en-US/images/phoneScreenshots/screenshot-settings-activity.png" target="_blank"><img src="./metadata/en-US/images/phoneScreenshots/screenshot-settings-activity.png" width="270"></a>
+<a href="./metadata/en-US/images/phoneScreenshots/screenshot-share-from-gallery.png" target="_blank"><img src="./metadata/en-US/images/phoneScreenshots/screenshot-share-from-gallery.png" width="270"></a>
+<a href="./metadata/en-US/images/phoneScreenshots/screenshot-server-notification.png" target="_blank"><img src="./metadata/en-US/images/phoneScreenshots/screenshot-server-notification.png" width="270"></a>
+<a href="./metadata/en-US/images/phoneScreenshots/screenshot-client-notifications.png" target="_blank"><img src="./metadata/en-US/images/phoneScreenshots/screenshot-client-notifications.png" width="270"></a>
 
 ## Usage
 
