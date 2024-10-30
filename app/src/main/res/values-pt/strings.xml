@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">Compartilhamento entre Perfis</string>
+    <string name="main_topbar_settings">Configurações</string>
+    <string name="main_text_1">Compartilhe arquivos, links e texto com outros perfis que tenham este aplicativo instalado.</string>
+    <string name="main_text_2">Recomenda-se ativar a criptografia (⚙️) para evitar que outros aplicativos acessem os dados compartilhados. Isso pode tornar a transferência mais lenta e menos confiável.</string>
+    <string name="main_text_3">Se as notificações de dados compartilhados em outro perfil não aparecerem imediatamente, abra este aplicativo para iniciar uma verificação.</string>
+    <string name="main_button_share_files_title">Compartilhar arquivos</string>
+    <string name="main_button_share_files_description">Selecione arquivos para compartilhar com outros perfis que tenham este aplicativo instalado.</string>
+    <string name="main_button_share_text_title">Compartilhar texto copiado</string>
+    <string name="main_button_share_text_description">Compartilhe o conteúdo atual da área de transferência com outros perfis que tenham este aplicativo instalado.</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">Configurações</string>
+    <string name="settings_category_security">Segurança</string>
+    <string name="settings_category_server">Servidor</string>
+    <string name="settings_encryption_toggle">Criptografia</string>
+    <string name="settings_encryption_summary">Criptografa a comunicação entre perfis usando AES, com chave baseada na senha compartilhada.</string>
+    <string name="settings_password">Senha compartilhada</string>
+    <string name="settings_password_title">Use a mesma senha em todos os perfis</string>
+    <string name="settings_password_description">A senha compartilhada é usada para criptografar a comunicação entre perfis do Android e garantir que nenhum outro aplicativo possa acessar os dados compartilhados.\n\nEscolha uma senha longa - você só precisa lembrá-la até configurar em todas as instâncias deste aplicativo (ou seja, em todos os perfis onde está instalado).\n\nRequisitos: Mínimo de 8 caracteres.</string>
+    <string name="settings_password_set">Senha configurada</string>
+    <string name="settings_password_not_set">Sem senha</string>
+    <string name="settings_port">Porta</string>
+    <string name="settings_port_title">A mesma porta TCP deve ser configurada em todos os perfis</string>
+    <string name="settings_port_description">Após selecionar informações para compartilhar, um socket TCP é aberto na interface de loopback local para servir dados a outras instâncias deste aplicativo em outros perfis.\n\nNormalmente não há motivo para alterar a porta padrão 2411.</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">Este aplicativo precisa de notificações. Sem spam, prometo.</string>
+    <string name="message_clipboard_empty">Área de transferência vazia.</string>
+    <string name="message_files_none">Nenhum arquivo selecionado.</string>
+    <string name="message_password_invalid">A senha deve ter pelo menos 8 caracteres.</string>
+    <string name="message_key_generation_failed">Erro ao gerar chave AES da senha compartilhada</string>
+    <string name="message_set_password_first">A criptografia requer uma senha compartilhada</string>
+    <string name="message_port_invalid">A porta deve ser um número entre 0 e 65535.</string>
+    <string name="message_share_text_copy_success">Texto copiado para a área de transferência</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">Notificações de compartilhamento</string>
+    <string name="notifications_channel_description">Notificações sobre dados atualmente compartilhados</string>
+    <string name="notifications_share_file_title">Novo arquivo compartilhado</string>
+    <string name="notifications_share_file_size_unknown">tamanho desconhecido</string>
+    <string name="notifications_share_file_action_download">Baixar</string>
+    <string name="notifications_share_file_action_share">Baixar e compartilhar…</string>
+    <string name="notifications_share_text_title">Novo texto compartilhado</string>
+    <string name="notifications_share_text_action_copy">Copiar para área de transferência</string>
+    <string name="notifications_share_text_action_share">Compartilhar…</string>
+    <string name="notifications_share_text_action_share_choose">Compartilhar texto via</string>
+    <string name="notifications_share_text_action_share_clip">Texto compartilhado</string>
+    <string name="notifications_share_files_title">Novos arquivos %1$s compartilhados</string>
+    <string name="notifications_share_files_description">%1$s arquivos (%2$s)</string>
+    <string name="notifications_share_files_action_download">Baixar tudo</string>
+    <string name="notifications_share_files_action_share">Baixar e compartilhar tudo…</string>
+    <string name="notifications_share_files_download">Baixando %1$s</string>
+    <string name="notifications_share_files_download_share">Baixando %1$s para compartilhar</string>
+    <string name="notifications_share_files_download_fail">Falha no download</string>
+    <string name="notifications_share_files_download_fail_share">Falha ao compartilhar</string>
+    <string name="notifications_share_files_download_fail_description">Falha ao baixar %1$s</string>
+    <string name="notifications_share_files_download_fail_description_partial">Falha ao baixar alguns arquivos</string>
+    <string name="notifications_share_files_download_complete">Download concluído</string>
+    <string name="notifications_share_files_download_complete_description">%1$s salvo em Downloads</string>
+    <string name="notifications_share_files_download_complete_description_multiple">%1$s arquivos salvos em Downloads</string>
+    <string name="notifications_share_files_download_share_choose">Compartilhar %1$s via</string>
+    <string name="notifications_share_files_download_share_choose_multiple">Compartilhar arquivos via</string>
+    <string name="notifications_share_files_download_share_choose_title">Pronto para compartilhar %1$s</string>
+    <string name="notifications_share_files_download_share_choose_description">Toque para compartilhar</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">Pronto para compartilhar %1$s arquivos</string>
+    <string name="notifications_server_title">Compartilhamento entre Perfis</string>
+    <string name="notifications_server_action_stop">Parar compartilhamento</string>
+    <string name="notifications_server_description_ready">Pronto, mas nada compartilhado</string>
+    <string name="notifications_server_description_text">Compartilhando texto \"%1$s\"</string>
+    <string name="notifications_server_description_file">Compartilhando arquivo \"%1$s\" (%2$s)</string>
+    <string name="notifications_server_description_texts">Compartilhando vários textos \"%1$s\"</string>
+    <string name="notifications_server_description_mixed">Compartilhando vários dados (%1$s)</string>
+    <string name="notifications_server_description_unknown">Compartilhando dados</string>
+</resources>

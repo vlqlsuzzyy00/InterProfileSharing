@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">プロファイル間共有</string>
+    <string name="main_topbar_settings">設定</string>
+    <string name="main_text_1">このアプリをインストールした他のプロファイルとファイル、リンク、テキストを共有できます。</string>
+    <string name="main_text_2">他のアプリから共有データへのアクセスを防ぐため、暗号化（⚙️）の有効化を推奨します。転送速度と信頼性に影響する可能性があります。</string>
+    <string name="main_text_3">他のプロファイルでの共有通知が表示されない場合は、このアプリを開いて確認を実行してください。</string>
+    <string name="main_button_share_files_title">ファイル共有</string>
+    <string name="main_button_share_files_description">このアプリをインストールした他のプロファイルと共有するファイルを選択</string>
+    <string name="main_button_share_text_title">コピーしたテキストを共有</string>
+    <string name="main_button_share_text_description">クリップボードの内容を他のプロファイルと共有</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">設定</string>
+    <string name="settings_category_security">セキュリティ</string>
+    <string name="settings_category_server">サーバー</string>
+    <string name="settings_encryption_toggle">暗号化</string>
+    <string name="settings_encryption_summary">共有パスワードを基にしたAES暗号化でプロファイル間の通信を保護します。</string>
+    <string name="settings_password">共有パスワード</string>
+    <string name="settings_password_title">全プロファイルで同じパスワードを設定</string>
+    <string name="settings_password_description">共有パスワードは、Androidプロファイル間の通信を暗号化し、他のアプリからのデータアクセスを防ぎます。\n\n長いパスワードを選んでください。全プロファイルでの設定が完了するまでの間だけ覚えておく必要があります。\n\n要件：8文字以上</string>
+    <string name="settings_password_set">パスワード設定済み</string>
+    <string name="settings_password_not_set">未設定</string>
+    <string name="settings_port">ポート</string>
+    <string name="settings_port_title">全プロファイルで同じTCPポートを設定</string>
+    <string name="settings_port_description">共有時、ローカルループバックインターフェースにTCPソケットを開き、他プロファイルのアプリにデータを提供します。\n\n通常、デフォルトポート2411から変更する必要はありません。</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">通知が必要です。スパムはありません。</string>
+    <string name="message_clipboard_empty">クリップボードが空です</string>
+    <string name="message_files_none">ファイルが選択されていません</string>
+    <string name="message_password_invalid">パスワードは8文字以上必要です</string>
+    <string name="message_key_generation_failed">暗号化キーの生成に失敗しました</string>
+    <string name="message_set_password_first">暗号化にはパスワードが必要です</string>
+    <string name="message_port_invalid">ポートは0～65535の数値で指定してください</string>
+    <string name="message_share_text_copy_success">クリップボードにコピーしました</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">共有通知</string>
+    <string name="notifications_channel_description">現在共有中のデータに関する通知</string>
+    <string name="notifications_share_file_title">新しい共有ファイル</string>
+    <string name="notifications_share_file_size_unknown">サイズ不明</string>
+    <string name="notifications_share_file_action_download">保存</string>
+    <string name="notifications_share_file_action_share">保存して共有</string>
+    <string name="notifications_share_text_title">新しい共有テキスト</string>
+    <string name="notifications_share_text_action_copy">コピー</string>
+    <string name="notifications_share_text_action_share">共有</string>
+    <string name="notifications_share_text_action_share_choose">共有方法を選択</string>
+    <string name="notifications_share_text_action_share_clip">共有テキスト</string>
+    <string name="notifications_share_files_title">新しい共有ファイル：%1$s</string>
+    <string name="notifications_share_files_description">%1$sファイル（%2$s）</string>
+    <string name="notifications_share_files_action_download">全て保存</string>
+    <string name="notifications_share_files_action_share">全て保存して共有</string>
+    <string name="notifications_share_files_download">%1$sを保存中</string>
+    <string name="notifications_share_files_download_share">共有用に%1$sを保存中</string>
+    <string name="notifications_share_files_download_fail">保存失敗</string>
+    <string name="notifications_share_files_download_fail_share">共有失敗</string>
+    <string name="notifications_share_files_download_fail_description">%1$sの保存に失敗しました</string>
+    <string name="notifications_share_files_download_fail_description_partial">一部のファイルの保存に失敗しました</string>
+    <string name="notifications_share_files_download_complete">保存完了</string>
+    <string name="notifications_share_files_download_complete_description">%1$sをダウンロードフォルダに保存しました</string>
+    <string name="notifications_share_files_download_complete_description_multiple">%1$sファイルをダウンロードフォルダに保存しました</string>
+    <string name="notifications_share_files_download_share_choose">%1$sの共有方法を選択</string>
+    <string name="notifications_share_files_download_share_choose_multiple">ファイルの共有方法を選択</string>
+    <string name="notifications_share_files_download_share_choose_title">%1$sを共有できます</string>
+    <string name="notifications_share_files_download_share_choose_description">タップして共有</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">%1$sファイルを共有できます</string>
+    <string name="notifications_server_title">プロファイル間共有</string>
+    <string name="notifications_server_action_stop">共有停止</string>
+    <string name="notifications_server_description_ready">準備完了（共有なし）</string>
+    <string name="notifications_server_description_text">テキスト「%1$s」を共有中</string>
+    <string name="notifications_server_description_file">ファイル「%1$s」（%2$s）を共有中</string>
+    <string name="notifications_server_description_texts">複数のテキスト「%1$s」を共有中</string>
+    <string name="notifications_server_description_mixed">複数のデータ（%1$s）を共有中</string>
+    <string name="notifications_server_description_unknown">データを共有中</string>
+</resources>

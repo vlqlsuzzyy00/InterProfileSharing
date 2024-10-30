@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">Condivisione tra Profili</string>
+    <string name="main_topbar_settings">Impostazioni</string>
+    <string name="main_text_1">Condividi file, link e testo con altri profili che hanno questa app installata.</string>
+    <string name="main_text_2">Si consiglia di attivare la crittografia (⚙️) per impedire ad altre app di accedere ai dati condivisi. Questo potrebbe rallentare il trasferimento e renderlo meno affidabile.</string>
+    <string name="main_text_3">Se le notifiche dei dati condivisi in un altro profilo non appaiono subito, apri questa app per avviare una verifica.</string>
+    <string name="main_button_share_files_title">Condividi file</string>
+    <string name="main_button_share_files_description">Seleziona i file da condividere con altri profili che hanno questa app installata.</string>
+    <string name="main_button_share_text_title">Condividi testo copiato</string>
+    <string name="main_button_share_text_description">Condividi il contenuto attuale degli appunti con altri profili che hanno questa app installata.</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">Impostazioni</string>
+    <string name="settings_category_security">Sicurezza</string>
+    <string name="settings_category_server">Server</string>
+    <string name="settings_encryption_toggle">Crittografia</string>
+    <string name="settings_encryption_summary">Cripta la comunicazione tra i profili usando AES, con chiave basata sulla password condivisa.</string>
+    <string name="settings_password">Password condivisa</string>
+    <string name="settings_password_title">Usa la stessa password in tutti i profili</string>
+    <string name="settings_password_description">La password condivisa viene usata per crittografare la comunicazione tra i profili Android e garantire che nessun\'altra app possa accedere ai dati condivisi.\n\nScegli una password lunga - devi solo ricordarla finché non l\'hai configurata in tutte le istanze di questa app (cioè in tutti i profili dove è installata).\n\nRequisiti: minimo 8 caratteri.</string>
+    <string name="settings_password_set">Password configurata</string>
+    <string name="settings_password_not_set">Nessuna password</string>
+    <string name="settings_port">Porta</string>
+    <string name="settings_port_title">La stessa porta TCP deve essere configurata in tutti i profili</string>
+    <string name="settings_port_description">Dopo aver selezionato le informazioni da condividere, viene aperto un socket TCP sull\'interfaccia di loopback locale per fornire dati ad altre istanze di questa app in altri profili.\n\nDi solito non c\'è motivo di cambiare la porta predefinita 2411.</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">Questa app ha bisogno delle notifiche. Niente spam, promesso!</string>
+    <string name="message_clipboard_empty">Gli appunti sono vuoti.</string>
+    <string name="message_files_none">Nessun file selezionato.</string>
+    <string name="message_password_invalid">La password deve essere di almeno 8 caratteri.</string>
+    <string name="message_key_generation_failed">Errore nella generazione della chiave AES dalla password condivisa</string>
+    <string name="message_set_password_first">La crittografia richiede una password condivisa</string>
+    <string name="message_port_invalid">La porta deve essere un numero tra 0 e 65535.</string>
+    <string name="message_share_text_copy_success">Testo copiato negli appunti</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">Notifiche di condivisione</string>
+    <string name="notifications_channel_description">Notifiche sui dati attualmente condivisi</string>
+    <string name="notifications_share_file_title">Nuovo file condiviso</string>
+    <string name="notifications_share_file_size_unknown">dimensione sconosciuta</string>
+    <string name="notifications_share_file_action_download">Scarica</string>
+    <string name="notifications_share_file_action_share">Scarica e condividi…</string>
+    <string name="notifications_share_text_title">Nuovo testo condiviso</string>
+    <string name="notifications_share_text_action_copy">Copia negli appunti</string>
+    <string name="notifications_share_text_action_share">Condividi…</string>
+    <string name="notifications_share_text_action_share_choose">Condividi testo tramite</string>
+    <string name="notifications_share_text_action_share_clip">Testo condiviso</string>
+    <string name="notifications_share_files_title">Nuovi file %1$s condivisi</string>
+    <string name="notifications_share_files_description">%1$s file (%2$s)</string>
+    <string name="notifications_share_files_action_download">Scarica tutto</string>
+    <string name="notifications_share_files_action_share">Scarica e condividi tutto…</string>
+    <string name="notifications_share_files_download">Download di %1$s</string>
+    <string name="notifications_share_files_download_share">Download di %1$s per condivisione</string>
+    <string name="notifications_share_files_download_fail">Download fallito</string>
+    <string name="notifications_share_files_download_fail_share">Condivisione fallita</string>
+    <string name="notifications_share_files_download_fail_description">Download di %1$s fallito</string>
+    <string name="notifications_share_files_download_fail_description_partial">Download di alcuni file fallito</string>
+    <string name="notifications_share_files_download_complete">Download completato</string>
+    <string name="notifications_share_files_download_complete_description">%1$s salvato in Download</string>
+    <string name="notifications_share_files_download_complete_description_multiple">%1$s file salvati in Download</string>
+    <string name="notifications_share_files_download_share_choose">Condividi %1$s tramite</string>
+    <string name="notifications_share_files_download_share_choose_multiple">Condividi file tramite</string>
+    <string name="notifications_share_files_download_share_choose_title">Pronto per condividere %1$s</string>
+    <string name="notifications_share_files_download_share_choose_description">Tocca per condividere</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">Pronto per condividere %1$s file</string>
+    <string name="notifications_server_title">Condivisione tra Profili</string>
+    <string name="notifications_server_action_stop">Ferma condivisione</string>
+    <string name="notifications_server_description_ready">Pronto, ma nulla in condivisione</string>
+    <string name="notifications_server_description_text">Condivisione testo \"%1$s\"</string>
+    <string name="notifications_server_description_file">Condivisione file \"%1$s\" (%2$s)</string>
+    <string name="notifications_server_description_texts">Condivisione di più testi \"%1$s\"</string>
+    <string name="notifications_server_description_mixed">Condivisione di più dati (%1$s)</string>
+    <string name="notifications_server_description_unknown">Condivisione dati</string>
+</resources>

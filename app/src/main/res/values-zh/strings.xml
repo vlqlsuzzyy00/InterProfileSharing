@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">跨配置文件共享</string>
+    <string name="main_topbar_settings">设置</string>
+    <string name="main_text_1">与安装此应用的其他配置文件共享文件、链接和文本。</string>
+    <string name="main_text_2">建议启用加密（⚙️）以防止其他应用访问共享数据。这可能会降低传输速度和可靠性。</string>
+    <string name="main_text_3">如果在其他配置文件中共享的数据通知没有立即显示，请打开此应用触发检查。</string>
+    <string name="main_button_share_files_title">共享文件</string>
+    <string name="main_button_share_files_description">选择要与其他已安装此应用的配置文件共享的文件。</string>
+    <string name="main_button_share_text_title">共享剪贴板文本</string>
+    <string name="main_button_share_text_description">与其他已安装此应用的配置文件共享当前剪贴板内容。</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">设置</string>
+    <string name="settings_category_security">安全</string>
+    <string name="settings_category_server">服务器</string>
+    <string name="settings_encryption_toggle">加密</string>
+    <string name="settings_encryption_summary">使用基于共享密码的 AES 密钥加密配置文件间通信。</string>
+    <string name="settings_password">共享密码</string>
+    <string name="settings_password_title">在所有配置文件中使用相同的密码</string>
+    <string name="settings_password_description">共享密码用于加密 Android 配置文件之间的通信，确保其他应用无法访问共享数据。\n\n请选择较长的密码——您只需要记住它直到在所有配置文件中设置完成（即在所有安装此应用的配置文件中）。\n\n要求：至少 8 个字符。</string>
+    <string name="settings_password_set">已设置密码</string>
+    <string name="settings_password_not_set">未设置密码</string>
+    <string name="settings_port">端口</string>
+    <string name="settings_port_title">所有配置文件必须设置相同的 TCP 端口</string>
+    <string name="settings_port_description">选择要共享的信息后，将在本地回环接口上打开 TCP 套接字，为其他配置文件中的应用实例提供数据。\n\n通常无需更改默认端口 2411。</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">此应用需要通知权限。保证不会发送垃圾信息。</string>
+    <string name="message_clipboard_empty">剪贴板为空。</string>
+    <string name="message_files_none">未选择文件。</string>
+    <string name="message_password_invalid">密码至少需要 8 个字符。</string>
+    <string name="message_key_generation_failed">从共享密码生成 AES 密钥失败</string>
+    <string name="message_set_password_first">加密需要共享密码</string>
+    <string name="message_port_invalid">端口必须是 0 到 65535 之间的数字。</string>
+    <string name="message_share_text_copy_success">文本已复制到剪贴板</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">共享通知</string>
+    <string name="notifications_channel_description">当前共享数据的通知</string>
+    <string name="notifications_share_file_title">新共享文件</string>
+    <string name="notifications_share_file_size_unknown">大小未知</string>
+    <string name="notifications_share_file_action_download">下载</string>
+    <string name="notifications_share_file_action_share">下载并分享…</string>
+    <string name="notifications_share_text_title">新共享文本</string>
+    <string name="notifications_share_text_action_copy">复制到剪贴板</string>
+    <string name="notifications_share_text_action_share">分享…</string>
+    <string name="notifications_share_text_action_share_choose">分享文本方式</string>
+    <string name="notifications_share_text_action_share_clip">共享文本</string>
+    <string name="notifications_share_files_title">新共享的%1$s文件</string>
+    <string name="notifications_share_files_description">%1$s个文件（%2$s）</string>
+    <string name="notifications_share_files_action_download">全部下载</string>
+    <string name="notifications_share_files_action_share">下载并分享全部…</string>
+    <string name="notifications_share_files_download">正在下载%1$s</string>
+    <string name="notifications_share_files_download_share">正在下载%1$s以分享</string>
+    <string name="notifications_share_files_download_fail">下载失败</string>
+    <string name="notifications_share_files_download_fail_share">分享失败</string>
+    <string name="notifications_share_files_download_fail_description">下载%1$s失败</string>
+    <string name="notifications_share_files_download_fail_description_partial">部分文件下载失败</string>
+    <string name="notifications_share_files_download_complete">下载完成</string>
+    <string name="notifications_share_files_download_complete_description">%1$s已保存到下载文件夹</string>
+    <string name="notifications_share_files_download_complete_description_multiple">%1$s个文件已保存到下载文件夹</string>
+    <string name="notifications_share_files_download_share_choose">分享%1$s方式</string>
+    <string name="notifications_share_files_download_share_choose_multiple">分享文件方式</string>
+    <string name="notifications_share_files_download_share_choose_title">准备分享%1$s</string>
+    <string name="notifications_share_files_download_share_choose_description">点击分享</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">准备分享%1$s个文件</string>
+    <string name="notifications_server_title">跨配置文件共享</string>
+    <string name="notifications_server_action_stop">停止共享</string>
+    <string name="notifications_server_description_ready">就绪，但未共享内容</string>
+    <string name="notifications_server_description_text">正在共享文本：\"%1$s\"</string>
+    <string name="notifications_server_description_file">正在共享文件：\"%1$s\"（%2$s）</string>
+    <string name="notifications_server_description_texts">正在共享多个文本：\"%1$s\"</string>
+    <string name="notifications_server_description_mixed">正在共享多个数据（%1$s）</string>
+    <string name="notifications_server_description_unknown">正在共享数据</string>
+</resources>

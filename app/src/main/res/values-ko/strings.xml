@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">프로필 간 공유</string>
+    <string name="main_topbar_settings">설정</string>
+    <string name="main_text_1">이 앱이 설치된 다른 프로필과 파일, 링크, 텍스트를 공유할 수 있습니다.</string>
+    <string name="main_text_2">다른 앱이 공유 중인 데이터에 접근하는 것을 방지하기 위해 암호화(⚙️)를 활성화하는 것이 좋습니다. 전송 속도가 느려지고 안정성이 떨어질 수 있습니다.</string>
+    <string name="main_text_3">다른 프로필에서 공유된 데이터의 알림이 바로 표시되지 않는 경우, 이 앱을 열어 확인을 시작해 주세요.</string>
+    <string name="main_button_share_files_title">파일 공유</string>
+    <string name="main_button_share_files_description">이 앱이 설치된 다른 프로필과 공유할 파일을 선택하세요.</string>
+    <string name="main_button_share_text_title">복사된 텍스트 공유</string>
+    <string name="main_button_share_text_description">현재 클립보드의 내용을 이 앱이 설치된 다른 프로필과 공유합니다.</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">설정</string>
+    <string name="settings_category_security">보안</string>
+    <string name="settings_category_server">서버</string>
+    <string name="settings_encryption_toggle">암호화</string>
+    <string name="settings_encryption_summary">공유 비밀번호를 기반으로 한 AES 키로 프로필 간 통신을 암호화합니다.</string>
+    <string name="settings_password">공유 비밀번호</string>
+    <string name="settings_password_title">모든 프로필에서 동일한 비밀번호를 사용하세요</string>
+    <string name="settings_password_description">공유 비밀번호는 Android 프로필 간 통신을 암호화하고 다른 앱이 공유된 데이터에 접근하지 못하도록 하는 데 사용됩니다.\n\n긴 비밀번호를 선택하세요 - 이 앱의 모든 인스턴스(즉, 앱이 설치된 모든 프로필)에서 설정할 때까지만 기억하면 됩니다.\n\n요구사항: 최소 8자</string>
+    <string name="settings_password_set">비밀번호가 설정되었습니다</string>
+    <string name="settings_password_not_set">비밀번호가 설정되지 않았습니다</string>
+    <string name="settings_port">포트</string>
+    <string name="settings_port_title">모든 프로필에서 동일한 TCP 포트를 설정해야 합니다</string>
+    <string name="settings_port_description">공유할 정보를 선택하면 다른 프로필의 앱 인스턴스에 데이터를 제공하기 위해 로컬 루프백 인터페이스에 TCP 소켓이 열립니다.\n\n기본 포트 2411을 변경할 필요는 없습니다.</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">이 앱은 알림이 필요합니다. 스팸은 보내지 않습니다.</string>
+    <string name="message_clipboard_empty">클립보드가 비어 있습니다.</string>
+    <string name="message_files_none">선택된 파일이 없습니다.</string>
+    <string name="message_password_invalid">비밀번호는 최소 8자 이상이어야 합니다.</string>
+    <string name="message_key_generation_failed">공유 비밀번호에서 AES 키 생성 실패</string>
+    <string name="message_set_password_first">암호화를 위해 공유 비밀번호가 필요합니다</string>
+    <string name="message_port_invalid">포트는 0에서 65535 사이의 숫자여야 합니다.</string>
+    <string name="message_share_text_copy_success">텍스트가 클립보드에 복사되었습니다</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">공유 알림</string>
+    <string name="notifications_channel_description">현재 공유 중인 데이터에 대한 알림</string>
+    <string name="notifications_share_file_title">새로운 공유 파일</string>
+    <string name="notifications_share_file_size_unknown">크기 알 수 없음</string>
+    <string name="notifications_share_file_action_download">다운로드</string>
+    <string name="notifications_share_file_action_share">다운로드 후 공유…</string>
+    <string name="notifications_share_text_title">새로운 공유 텍스트</string>
+    <string name="notifications_share_text_action_copy">클립보드에 복사</string>
+    <string name="notifications_share_text_action_share">공유…</string>
+    <string name="notifications_share_text_action_share_choose">텍스트 공유 방법</string>
+    <string name="notifications_share_text_action_share_clip">공유된 텍스트</string>
+    <string name="notifications_share_files_title">새로운 %1$s 파일 공유됨</string>
+    <string name="notifications_share_files_description">파일 %1$s개 (%2$s)</string>
+    <string name="notifications_share_files_action_download">모두 다운로드</string>
+    <string name="notifications_share_files_action_share">모두 다운로드 후 공유…</string>
+    <string name="notifications_share_files_download">%1$s 다운로드 중</string>
+    <string name="notifications_share_files_download_share">공유를 위해 %1$s 다운로드 중</string>
+    <string name="notifications_share_files_download_fail">다운로드 실패</string>
+    <string name="notifications_share_files_download_fail_share">공유 실패</string>
+    <string name="notifications_share_files_download_fail_description">%1$s 다운로드 실패</string>
+    <string name="notifications_share_files_download_fail_description_partial">일부 파일 다운로드 실패</string>
+    <string name="notifications_share_files_download_complete">다운로드 완료</string>
+    <string name="notifications_share_files_download_complete_description">%1$s이(가) 다운로드 폴더에 저장되었습니다</string>
+    <string name="notifications_share_files_download_complete_description_multiple">%1$s개의 파일이 다운로드 폴더에 저장되었습니다</string>
+    <string name="notifications_share_files_download_share_choose">%1$s 공유 방법</string>
+    <string name="notifications_share_files_download_share_choose_multiple">파일 공유 방법</string>
+    <string name="notifications_share_files_download_share_choose_title">%1$s 공유 준비됨</string>
+    <string name="notifications_share_files_download_share_choose_description">터치하여 공유</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">%1$s개의 파일 공유 준비됨</string>
+    <string name="notifications_server_title">프로필 간 공유</string>
+    <string name="notifications_server_action_stop">공유 중지</string>
+    <string name="notifications_server_description_ready">준비되었지만 공유 중인 항목 없음</string>
+    <string name="notifications_server_description_text">텍스트 공유 중: \"%1$s\"</string>
+    <string name="notifications_server_description_file">파일 공유 중: \"%1$s\" (%2$s)</string>
+    <string name="notifications_server_description_texts">여러 텍스트 공유 중: \"%1$s\"</string>
+    <string name="notifications_server_description_mixed">여러 데이터 공유 중 (%1$s)</string>
+    <string name="notifications_server_description_unknown">데이터 공유 중</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">Profil-Datenaustausch</string>
+    <string name="main_topbar_settings">Einstellungen</string>
+    <string name="main_text_1">Teilen Sie Dateien, Links und Text mit anderen Profilen, in denen diese App installiert ist.</string>
+    <string name="main_text_2">Die Aktivierung der Verschlüsselung (⚙️) wird empfohlen, um zu verhindern, dass andere installierte Apps auf aktuell geteilte Daten zugreifen können. Dies kann die Dateiübertragung verlangsamen und weniger zuverlässig machen.</string>
+    <string name="main_text_3">Falls Benachrichtigungen über in einem anderen Profil geteilte Daten nicht sofort erscheinen, öffnen Sie diese App, um eine Überprüfung auszulösen.</string>
+    <string name="main_button_share_files_title">Dateien teilen</string>
+    <string name="main_button_share_files_description">Wählen Sie Dateien aus, die Sie mit anderen Profilen teilen möchten, in denen diese App installiert ist.</string>
+    <string name="main_button_share_text_title">Kopierten Text teilen</string>
+    <string name="main_button_share_text_description">Teilen Sie den aktuellen Inhalt Ihrer Zwischenablage mit anderen Profilen, in denen diese App installiert ist.</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">Einstellungen</string>
+    <string name="settings_category_security">Sicherheit</string>
+    <string name="settings_category_server">Server</string>
+    <string name="settings_encryption_toggle">Verschlüsselung</string>
+    <string name="settings_encryption_summary">Kommunikation zwischen Profilen mit AES verschlüsseln, Schlüssel basierend auf dem gemeinsamen Passwort.</string>
+    <string name="settings_password">Gemeinsames Passwort</string>
+    <string name="settings_password_title">Setzen Sie das gleiche Passwort in allen Profilen</string>
+    <string name="settings_password_description">Das gemeinsame Passwort wird verwendet, um die Kommunikation dieser App zwischen Android-Benutzerprofilen zu verschlüsseln und sicherzustellen, dass keine andere App auf geteilte Daten zugreifen kann.\n\nWählen Sie etwas Langes - Sie müssen es sich nur merken, bis Sie es in allen Instanzen dieser App gesetzt haben (d.h. in allen Profilen, in denen diese App installiert ist).\n\nBeschränkungen: Minimale Länge von 8 Zeichen.</string>
+    <string name="settings_password_set">Ein Passwort ist gesetzt</string>
+    <string name="settings_password_not_set">Kein Passwort gesetzt</string>
+    <string name="settings_port">Port</string>
+    <string name="settings_port_title">Der gleiche TCP-Port muss in allen Profilen eingestellt sein</string>
+    <string name="settings_port_description">Nach der Auswahl der zu teilenden Informationen wird ein TCP-Socket auf der lokalen Loopback-Schnittstelle geöffnet, um Daten an Instanzen dieser App in anderen Android-Benutzerprofilen zu übertragen.\n\nNormalerweise sollte es keinen Grund geben, vom Standard-Port 2411 abzuweichen.</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">Diese App benötigt Benachrichtigungen. Kein Spam, versprochen.</string>
+    <string name="message_clipboard_empty">Zwischenablage ist leer.</string>
+    <string name="message_files_none">Keine Dateien ausgewählt.</string>
+    <string name="message_password_invalid">Passwort muss mindestens 8 Zeichen lang sein.</string>
+    <string name="message_key_generation_failed">Generierung des AES Schlüssels aus dem gemeinsamen Passwort fehlgeschlagen</string>
+    <string name="message_set_password_first">Verschlüsselung erfordert ein gemeinsames Passwort</string>
+    <string name="message_port_invalid">Port muss eine Zahl zwischen 0 und 65535 sein.</string>
+    <string name="message_share_text_copy_success">Text in Zwischenablage kopiert</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">Freigabe-Benachrichtigungen</string>
+    <string name="notifications_channel_description">Benachrichtigungen über aktuell geteilte Daten</string>
+    <string name="notifications_share_file_title">Neue geteilte Datei</string>
+    <string name="notifications_share_file_size_unknown">unbekannte Größe</string>
+    <string name="notifications_share_file_action_download">Herunterladen</string>
+    <string name="notifications_share_file_action_share">Herunterladen und teilen…</string>
+    <string name="notifications_share_text_title">Neuer geteilter Text</string>
+    <string name="notifications_share_text_action_copy">In Zwischenablage kopieren</string>
+    <string name="notifications_share_text_action_share">Teilen…</string>
+    <string name="notifications_share_text_action_share_choose">Text teilen über</string>
+    <string name="notifications_share_text_action_share_clip">Geteilter Text</string>
+    <string name="notifications_share_files_title">Neue geteilte %1$s Dateien</string>
+    <string name="notifications_share_files_description">%1$s Dateien (%2$s)</string>
+    <string name="notifications_share_files_action_download">Alle herunterladen</string>
+    <string name="notifications_share_files_action_share">Alle herunterladen und teilen…</string>
+    <string name="notifications_share_files_download">Lade %1$s herunter</string>
+    <string name="notifications_share_files_download_share">Lade %1$s zum Teilen herunter</string>
+    <string name="notifications_share_files_download_fail">Download fehlgeschlagen</string>
+    <string name="notifications_share_files_download_fail_share">Teilen fehlgeschlagen</string>
+    <string name="notifications_share_files_download_fail_description">Herunterladen von %1$s fehlgeschlagen</string>
+    <string name="notifications_share_files_download_fail_description_partial">Einige Dateien konnten nicht heruntergeladen werden</string>
+    <string name="notifications_share_files_download_complete">Download abgeschlossen</string>
+    <string name="notifications_share_files_download_complete_description">%1$s in Downloads gespeichert</string>
+    <string name="notifications_share_files_download_complete_description_multiple">%1$s Dateien in Downloads gespeichert</string>
+    <string name="notifications_share_files_download_share_choose">%1$s teilen über</string>
+    <string name="notifications_share_files_download_share_choose_multiple">Dateien teilen über</string>
+    <string name="notifications_share_files_download_share_choose_title">Bereit zum Teilen von %1$s</string>
+    <string name="notifications_share_files_download_share_choose_description">Tippen, um zu teilen</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">Bereit zum Teilen von %1$s Dateien</string>
+    <string name="notifications_server_title">Profil-Datenaustausch</string>
+    <string name="notifications_server_action_stop">Teilen beenden</string>
+    <string name="notifications_server_description_ready">Bereit, aber nichts wird geteilt</string>
+    <string name="notifications_server_description_text">Teile Text \"%1$s\"</string>
+    <string name="notifications_server_description_file">Teile Datei \"%1$s\" (%2$s)</string>
+    <string name="notifications_server_description_texts">Teile mehrere Texte \"%1$s\"</string>
+    <string name="notifications_server_description_mixed">Teile mehrere Dinge (%1$s)</string>
+    <string name="notifications_server_description_unknown">Teile daten</string>
+</resources>

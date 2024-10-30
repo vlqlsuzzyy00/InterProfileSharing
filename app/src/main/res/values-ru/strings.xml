@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">Обмен между профилями</string>
+    <string name="main_topbar_settings">Настройки</string>
+    <string name="main_text_1">Делись файлами, ссылками и текстом с другими профилями, где установлено это приложение.</string>
+    <string name="main_text_2">Рекомендуется включить шифрование (⚙️), чтобы другие приложения не могли получить доступ к передаваемым данным. Это может замедлить передачу и снизить её надёжность.</string>
+    <string name="main_text_3">Если уведомления о данных из другого профиля не появляются сразу, открой приложение для проверки.</string>
+    <string name="main_button_share_files_title">Поделиться файлами</string>
+    <string name="main_button_share_files_description">Выбери файлы для передачи в другие профили, где установлено это приложение.</string>
+    <string name="main_button_share_text_title">Поделиться текстом</string>
+    <string name="main_button_share_text_description">Отправь содержимое буфера обмена в другие профили, где установлено это приложение.</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">Настройки</string>
+    <string name="settings_category_security">Безопасность</string>
+    <string name="settings_category_server">Сервер</string>
+    <string name="settings_encryption_toggle">Шифрование</string>
+    <string name="settings_encryption_summary">Шифрует обмен данными между профилями с помощью AES, используя ключ на основе общего пароля.</string>
+    <string name="settings_password">Общий пароль</string>
+    <string name="settings_password_title">Используй одинаковый пароль во всех профилях</string>
+    <string name="settings_password_description">Общий пароль используется для шифрования обмена данными между профилями Android и защиты от доступа других приложений к передаваемым данным.\n\nВыбери длинный пароль – его нужно будет помнить только до настройки во всех копиях приложения (то есть во всех профилях, где оно установлено).\n\nТребования: минимум 8 символов.</string>
+    <string name="settings_password_set">Пароль установлен</string>
+    <string name="settings_password_not_set">Пароль не задан</string>
+    <string name="settings_port">Порт</string>
+    <string name="settings_port_title">Во всех профилях должен быть настроен одинаковый TCP-порт</string>
+    <string name="settings_port_description">После выбора данных для передачи, открывается TCP-сокет на локальном интерфейсе для обмена с копиями приложения в других профилях.\n\nОбычно нет причин менять порт по умолчанию 2411.</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">Приложению нужны уведомления. Спама не будет, обещаю.</string>
+    <string name="message_clipboard_empty">Буфер обмена пуст.</string>
+    <string name="message_files_none">Файлы не выбраны.</string>
+    <string name="message_password_invalid">Пароль должен быть не менее 8 символов.</string>
+    <string name="message_key_generation_failed">Не удалось создать ключ AES из общего пароля</string>
+    <string name="message_set_password_first">Для шифрования нужен общий пароль</string>
+    <string name="message_port_invalid">Порт должен быть числом от 0 до 65535.</string>
+    <string name="message_share_text_copy_success">Текст скопирован в буфер обмена</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">Уведомления об обмене</string>
+    <string name="notifications_channel_description">Уведомления о передаваемых данных</string>
+    <string name="notifications_share_file_title">Новый файл</string>
+    <string name="notifications_share_file_size_unknown">размер неизвестен</string>
+    <string name="notifications_share_file_action_download">Скачать</string>
+    <string name="notifications_share_file_action_share">Скачать и поделиться…</string>
+    <string name="notifications_share_text_title">Новый текст</string>
+    <string name="notifications_share_text_action_copy">Копировать</string>
+    <string name="notifications_share_text_action_share">Поделиться…</string>
+    <string name="notifications_share_text_action_share_choose">Поделиться текстом через</string>
+    <string name="notifications_share_text_action_share_clip">Полученный текст</string>
+    <string name="notifications_share_files_title">Новые %1$s файлы</string>
+    <string name="notifications_share_files_description">%1$s файлов (%2$s)</string>
+    <string name="notifications_share_files_action_download">Скачать все</string>
+    <string name="notifications_share_files_action_share">Скачать и поделиться всем…</string>
+    <string name="notifications_share_files_download">Скачивание: %1$s</string>
+    <string name="notifications_share_files_download_share">Скачивание %1$s для отправки</string>
+    <string name="notifications_share_files_download_fail">Ошибка скачивания</string>
+    <string name="notifications_share_files_download_fail_share">Ошибка отправки</string>
+    <string name="notifications_share_files_download_fail_description">Не удалось скачать %1$s</string>
+    <string name="notifications_share_files_download_fail_description_partial">Не удалось скачать некоторые файлы</string>
+    <string name="notifications_share_files_download_complete">Скачивание завершено</string>
+    <string name="notifications_share_files_download_complete_description">%1$s сохранён в загрузках</string>
+    <string name="notifications_share_files_download_complete_description_multiple">%1$s файлов сохранено в загрузках</string>
+    <string name="notifications_share_files_download_share_choose">Отправить %1$s через</string>
+    <string name="notifications_share_files_download_share_choose_multiple">Отправить файлы через</string>
+    <string name="notifications_share_files_download_share_choose_title">Готово к отправке: %1$s</string>
+    <string name="notifications_share_files_download_share_choose_description">Нажми для отправки</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">Готово к отправке: %1$s файлов</string>
+    <string name="notifications_server_title">Обмен между профилями</string>
+    <string name="notifications_server_action_stop">Остановить</string>
+    <string name="notifications_server_description_ready">Готово, но ничего не передаётся</string>
+    <string name="notifications_server_description_text">Передаётся текст «%1$s»</string>
+    <string name="notifications_server_description_file">Передаётся файл «%1$s» (%2$s)</string>
+    <string name="notifications_server_description_texts">Передаётся несколько текстов «%1$s»</string>
+    <string name="notifications_server_description_mixed">Передаются данные (%1$s)</string>
+    <string name="notifications_server_description_unknown">Передача данных</string>
+</resources>

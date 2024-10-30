@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">المشاركة بين الملفات الشخصية</string>
+    <string name="main_topbar_settings">الإعدادات</string>
+    <string name="main_text_1">شارك الملفات والروابط والنصوص مع الملفات الشخصية الأخرى التي تم تثبيت هذا التطبيق عليها.</string>
+    <string name="main_text_2">يُنصح بتفعيل التشفير (⚙️) لمنع التطبيقات الأخرى من الوصول إلى البيانات المشتركة. قد يؤدي هذا إلى إبطاء عملية النقل وتقليل موثوقيتها.</string>
+    <string name="main_text_3">إذا لم تظهر إشعارات البيانات المشتركة في ملف شخصي آخر على الفور، افتح هذا التطبيق لبدء التحقق.</string>
+    <string name="main_button_share_files_title">مشاركة الملفات</string>
+    <string name="main_button_share_files_description">اختر ملفات للمشاركة مع الملفات الشخصية الأخرى التي تم تثبيت هذا التطبيق عليها.</string>
+    <string name="main_button_share_text_title">مشاركة النص المنسوخ</string>
+    <string name="main_button_share_text_description">شارك محتوى الحافظة الحالي مع الملفات الشخصية الأخرى التي تم تثبيت هذا التطبيق عليها.</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">الإعدادات</string>
+    <string name="settings_category_security">الأمان</string>
+    <string name="settings_category_server">الخادم</string>
+    <string name="settings_encryption_toggle">التشفير</string>
+    <string name="settings_encryption_summary">تشفير الاتصال بين الملفات الشخصية باستخدام AES، مع مفتاح مبني على كلمة المرور المشتركة.</string>
+    <string name="settings_password">كلمة المرور المشتركة</string>
+    <string name="settings_password_title">استخدم نفس كلمة المرور في جميع الملفات الشخصية</string>
+    <string name="settings_password_description">تُستخدم كلمة المرور المشتركة لتشفير الاتصال بين ملفات Android الشخصية وضمان عدم تمكن أي تطبيق آخر من الوصول إلى البيانات المشتركة.\n\nاختر كلمة مرور طويلة - تحتاج فقط لتذكرها حتى تقوم بإعدادها في جميع نسخ هذا التطبيق (أي في جميع الملفات الشخصية التي تم تثبيته فيها).\n\nالمتطلبات: ٨ أحرف كحد أدنى.</string>
+    <string name="settings_password_set">تم تعيين كلمة المرور</string>
+    <string name="settings_password_not_set">لم يتم تعيين كلمة المرور</string>
+    <string name="settings_port">المنفذ</string>
+    <string name="settings_port_title">يجب تعيين نفس منفذ TCP في جميع الملفات الشخصية</string>
+    <string name="settings_port_description">بعد اختيار المعلومات للمشاركة، يتم فتح منفذ TCP على واجهة loopback المحلية لخدمة البيانات لنسخ هذا التطبيق الأخرى في الملفات الشخصية الأخرى.\n\nعادةً لا يوجد سبب للابتعاد عن المنفذ الافتراضي 2411.</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">يحتاج هذا التطبيق إلى الإشعارات. لا رسائل مزعجة، وعد.</string>
+    <string name="message_clipboard_empty">الحافظة فارغة.</string>
+    <string name="message_files_none">لم يتم اختيار ملفات.</string>
+    <string name="message_password_invalid">يجب أن تحتوي كلمة المرور على ٨ أحرف على الأقل.</string>
+    <string name="message_key_generation_failed">فشل إنشاء مفتاح AES من كلمة المرور المشتركة</string>
+    <string name="message_set_password_first">يتطلب التشفير كلمة مرور مشتركة</string>
+    <string name="message_port_invalid">يجب أن يكون المنفذ رقماً بين ٠ و٦٥٥٣٥.</string>
+    <string name="message_share_text_copy_success">تم نسخ النص إلى الحافظة</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">إشعارات المشاركة</string>
+    <string name="notifications_channel_description">إشعارات حول البيانات المشتركة حالياً</string>
+    <string name="notifications_share_file_title">ملف مشترك جديد</string>
+    <string name="notifications_share_file_size_unknown">حجم غير معروف</string>
+    <string name="notifications_share_file_action_download">تنزيل</string>
+    <string name="notifications_share_file_action_share">تنزيل ومشاركة…</string>
+    <string name="notifications_share_text_title">نص مشترك جديد</string>
+    <string name="notifications_share_text_action_copy">نسخ إلى الحافظة</string>
+    <string name="notifications_share_text_action_share">مشاركة…</string>
+    <string name="notifications_share_text_action_share_choose">مشاركة النص عبر</string>
+    <string name="notifications_share_text_action_share_clip">النص المشترك</string>
+    <string name="notifications_share_files_title">ملفات %1$s جديدة مشتركة</string>
+    <string name="notifications_share_files_description">%1$s ملف (%2$s)</string>
+    <string name="notifications_share_files_action_download">تنزيل الكل</string>
+    <string name="notifications_share_files_action_share">تنزيل ومشاركة الكل…</string>
+    <string name="notifications_share_files_download">جارٍ تنزيل %1$s</string>
+    <string name="notifications_share_files_download_share">جارٍ تنزيل %1$s للمشاركة</string>
+    <string name="notifications_share_files_download_fail">فشل التنزيل</string>
+    <string name="notifications_share_files_download_fail_share">فشلت المشاركة</string>
+    <string name="notifications_share_files_download_fail_description">فشل تنزيل %1$s</string>
+    <string name="notifications_share_files_download_fail_description_partial">فشل تنزيل بعض الملفات</string>
+    <string name="notifications_share_files_download_complete">اكتمل التنزيل</string>
+    <string name="notifications_share_files_download_complete_description">تم حفظ %1$s في التنزيلات</string>
+    <string name="notifications_share_files_download_complete_description_multiple">تم حفظ %1$s ملف في التنزيلات</string>
+    <string name="notifications_share_files_download_share_choose">مشاركة %1$s عبر</string>
+    <string name="notifications_share_files_download_share_choose_multiple">مشاركة الملفات عبر</string>
+    <string name="notifications_share_files_download_share_choose_title">جاهز لمشاركة %1$s</string>
+    <string name="notifications_share_files_download_share_choose_description">انقر للمشاركة</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">جاهز لمشاركة %1$s ملف</string>
+    <string name="notifications_server_title">المشاركة بين الملفات الشخصية</string>
+    <string name="notifications_server_action_stop">إيقاف المشاركة</string>
+    <string name="notifications_server_description_ready">جاهز، لكن لا توجد مشاركة حالياً</string>
+    <string name="notifications_server_description_text">جارٍ مشاركة النص "\%1$s"\</string>
+    <string name="notifications_server_description_file">جارٍ مشاركة الملف "\%1$s\" (%2$s)</string>
+    <string name="notifications_server_description_texts">جارٍ مشاركة عدة نصوص "\%1$s"\</string>
+    <string name="notifications_server_description_mixed">جارٍ مشاركة بيانات متعددة (%1$s)</string>
+    <string name="notifications_server_description_unknown">جارٍ مشاركة البيانات</string>
+</resources>

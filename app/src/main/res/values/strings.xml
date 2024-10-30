@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Inter Profile Sharing</string>
+
+    <!-- Strings on Main Page -->
+    <string name="main_activity_title">Inter Profile Sharing</string>
+    <string name="main_topbar_title">Inter Profile Sharing</string>
+    <string name="main_topbar_settings">Settings</string>
+    <string name="main_text_1">Share Files, Links and Text with other profiles that have this App installed.</string>
+    <string name="main_text_2">Enabling encryption (⚙️) is recommended to prevent other installed Apps from accessing currently shared data. It may make file transfer slower and less reliable.</string>
+    <string name="main_text_3">If notifications of data shared in another profile do not immediately appear, open this App to trigger a check.</string>
+    <string name="main_button_share_files_title">Share Files</string>
+    <string name="main_button_share_files_description">Select Files to share with other profiles that have this App installed.</string>
+    <string name="main_button_share_text_title">Share copied Text</string>
+    <string name="main_button_share_text_description">Share the current contents of your clipboard with other profiles that have this App installed.</string>
+
+    <!-- Strings on Settings Page -->
+    <string name="settings_activity_title">Settings</string>
+    <string name="settings_category_security">Security</string>
+    <string name="settings_category_server">Server</string>
+    <string name="settings_encryption_toggle">Encryption</string>
+    <string name="settings_encryption_summary">Encrypt cross-profile communications using AES, with key based on Sharing Password.</string>
+    <string name="settings_password">Sharing Password</string>
+    <string name="settings_password_title">Set the same Sharing Password in all Profiles</string>
+    <string name="settings_password_description">The Sharing Password is used to encrypt communication of this App between Android User Profiles, ensuring no other App is able to access shared data.\n\nChoose something long - you only have to remember it until you\'ve set it within all instances of this App (ie. in all Profiles where this App is installed).\n\nRestrictions: Minimum length of 8 characters.</string>
+    <string name="settings_password_set">A password is set</string>
+    <string name="settings_password_not_set">No password set</string>
+    <string name="settings_port">Port</string>
+    <string name="settings_port_title">The same TCP Port must be set in all Profiles</string>
+    <string name="settings_port_description">After selecting information to share, a TCP socket will be opened on the local loopback interface to serve data to instances of this App in other Android User Profiles.\n\nThere should normally be no need to deviate from the default port 2411.</string>
+
+    <!-- Strings in Toast Messages -->
+    <string name="message_notification_required">This App requires notifications. No spam, promise.</string>
+    <string name="message_clipboard_empty">Clipboard is empty.</string>
+    <string name="message_files_none">No files selected.</string>
+    <string name="message_password_invalid">Password must be at least 8 characters long.</string>
+    <string name="message_key_generation_failed">Failed to generate encryption key from Shared Password</string>
+    <string name="message_set_password_first">Encryption requires a Shared Password</string>
+    <string name="message_port_invalid">Port must be a number between 0 and 65535.</string>
+    <string name="message_share_text_copy_success">Text copied to clipboard</string>
+
+    <!-- Strings in and around Notifications -->
+    <string name="notifications_channel_name">Sharing Notifications</string>
+    <string name="notifications_channel_description">Notifications about currently shared items</string>
+    <string name="notifications_share_file_title">New shared file</string>
+    <string name="notifications_share_file_size_unknown">unknown size</string>
+    <string name="notifications_share_file_action_download">Add to Downloads</string>
+    <string name="notifications_share_file_action_share">Download and Share via…</string>
+    <string name="notifications_share_text_title">New shared text</string>
+    <string name="notifications_share_text_action_copy">Copy to Clipboard</string>
+    <string name="notifications_share_text_action_share">Share via…</string>
+    <string name="notifications_share_text_action_share_choose">Share text via</string>
+    <string name="notifications_share_text_action_share_clip">Shared Text</string>
+    <string name="notifications_share_files_title">New shared %1$s files</string>
+    <string name="notifications_share_files_description">%1$s files (%2$s)</string>
+    <string name="notifications_share_files_action_download">Add all to Downloads</string>
+    <string name="notifications_share_files_action_share">Download and Share all…</string>
+    <string name="notifications_share_files_download">Downloading %1$s</string>
+    <string name="notifications_share_files_download_share">Downloading %1$s for sharing</string>
+    <string name="notifications_share_files_download_fail">Download failed</string>
+    <string name="notifications_share_files_download_fail_share">Share failed</string>
+    <string name="notifications_share_files_download_fail_description">Failed to download %1$s</string>
+    <string name="notifications_share_files_download_fail_description_partial">Failed to download some files</string>
+    <string name="notifications_share_files_download_complete">Download complete</string>
+    <string name="notifications_share_files_download_complete_description">%1$s saved to Downloads</string>
+    <string name="notifications_share_files_download_complete_description_multiple">%1$s files saved to Downloads</string>
+    <string name="notifications_share_files_download_share_choose">Share %1$s via</string>
+    <string name="notifications_share_files_download_share_choose_multiple">Share files via</string>
+    <string name="notifications_share_files_download_share_choose_title">Ready to share %1$s</string>
+    <string name="notifications_share_files_download_share_choose_description">Tap to choose how to share</string>
+    <string name="notifications_share_files_download_share_choose_title_multiple">Ready to share %1$s files</string>
+    <string name="notifications_server_title">Inter Profile Sharing</string>
+    <string name="notifications_server_action_stop">Stop Sharing</string>
+    <string name="notifications_server_description_ready">Ready but not sharing anything</string>
+    <string name="notifications_server_description_text">Sharing text \"%1$s\"</string>
+    <string name="notifications_server_description_file">Sharing file \"%1$s\" (%2$s)</string>
+    <string name="notifications_server_description_texts">Sharing multiple texts \"%1$s\"</string>
+    <string name="notifications_server_description_mixed">Sharing multiple items (%1$s)</string>
+    <string name="notifications_server_description_unknown">Sharing item</string>
+
+</resources>
