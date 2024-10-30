@@ -6,6 +6,12 @@ No complicated setup. No fancy hacks. Well-established dependencies. Free Open S
 
 Although this App will run on any Android 14+ phone, it was designed and tested for GrapheneOS which comes with various [**improvements to Android's User Profiles**](https://grapheneos.org/features#improved-user-profiles). They allow isolating Apps from each other such that users are able to keep sensitive Applications separate from less trustworthy ones. Although GrapheneOS encourages their use, so much so that they raised the limit from 4 to 32 profiles per device, actually using them can be quite inconvenient. This App attempts to alleviate the arguably biggest pain point: The isolation of the file system between profiles, which requires less than optimal methods to bypass such as using USB Sticks, 3rd party Cloud Synchronization or Messaging Apps to move files between profiles.
 
+<a href="./assets/main-activity.png" target="_blank"><img src="./assets/main-activity.png" width="200"></a>
+<a href="./assets/settings-activity.png" target="_blank"><img src="./assets/settings-activity.png" width="200"></a>
+<a href="./assets/share-from-gallery.png" target="_blank"><img src="./assets/share-from-gallery.png" width="200"></a>
+<a href="./assets/server-notification.png" target="_blank"><img src="./assets/server-notification.png" width="200"></a>
+<a href="./assets/client-notifications.png" target="_blank"><img src="./assets/client-notifications.png" width="200"></a>
+
 ## Usage
 
 If you haven't, allow *multiple users* on your device by going into *Settings &raquo; System &raquo; Users*. You could create separate profiles for various types of Apps: Social Media, Encrypted Messengers, Banking, and maybe one for the bullshit App your gym forces you to have. Note though that switching between profiles can take several seconds. It's more convenient to have a profile containing all the Apps you often use during the day, and separate the others into different profiles.
