@@ -86,14 +86,31 @@ object EncryptionUtils {
         return Base64.decode(keyStr, Base64.NO_WRAP)
     }
 
+    /**
+     * Wraps the given output stream such that every time write() is called on the returned
+     * encrypting output stream, we encrypt the data before passing it on.
+     */
     fun encryptStream(context: Context, stream: OutputStream): OutputStream {
         return EncryptingOutputStream(stream, getStoredKey(context))
     }
 
+    /**
+     * Wraps the given input stream such that every time read() is called on the returned
+     * decrypting input stream, we decrypt the data coming in before returning it.
+     */
     fun decryptStream(context: Context, stream: InputStream): InputStream {
         return DecryptingInputStream(stream, getStoredKey(context))
     }
 
+    /**
+     * Encrypts stream data before passing it on to the given output.
+     *
+     * The passed cleartext is encrypted and its ciphertext becomes the message body, while
+     * the ciphertext size and the AES initialization vector become part of the header.
+     *
+     * With every write the contents streamed will be in the form [HEADER][BODY], or rather
+     *   [[SIZE][IV]][CIPHERTEXT]  which we'll call a message.
+     */
     private class EncryptingOutputStream(out: OutputStream, private val key: ByteArray) : FilterOutputStream(out) {
         private val aead = AesGcmJce(key)
         override fun write(data: ByteArray, off: Int, len: Int) {
@@ -110,6 +127,21 @@ object EncryptionUtils {
         }
     }
 
+    /**
+     * Decrypts received data before passing it back to the reader.
+     *
+     * There's no guarantee that we actually receive a single, full encrypted message with
+     * each chunk of data we read from the input stream. It could be any of these variations:
+     *
+     *  [HEAD
+     *  [HEAD]
+     *  [HEAD][BO
+     *  [HEAD][BODY]
+     *  [HEAD][BODY][HE
+     *  ... etc
+     *
+     * This is why decrypting the stream requires more careful handling, and buffers.
+     */
     private class DecryptingInputStream(input: InputStream, private val key: ByteArray) : FilterInputStream(input) {
         private val aead = AesGcmJce(key)
         private var headerBytesRead = 0
