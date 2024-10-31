@@ -6,7 +6,7 @@ This is a purposefully simple, native App that allows forwarding media and text 
 
 No complicated setup. No fancy hacks. Well-established dependencies. Free Open Source Code.
 
-Although this App will run on any Android 14+ phone, it was designed and tested for GrapheneOS which comes with various [**improvements to Android's User Profiles**](https://grapheneos.org/features#improved-user-profiles). They allow isolating Apps from each other such that users are able to keep sensitive Applications separate from less trustworthy ones. Although GrapheneOS encourages their use, so much so that they raised the limit from 4 to 32 profiles per device, actually using them can be quite inconvenient. This App attempts to alleviate the arguably biggest pain point: The isolation of the file system between profiles, which requires less than optimal methods to bypass such as using USB Sticks, 3rd party Cloud Synchronization or Messaging Apps to move files between profiles.
+Although this App will run on any Android 14+ phone, it was designed and tested for GrapheneOS which comes with various [**improvements to Android's User Profiles**](https://grapheneos.org/features#improved-user-profiles). Profiles allow isolating Apps from each other such that users are able to keep sensitive Applications separate from less trustworthy ones. Although GrapheneOS encourages their use, so much so that they raised the limit from 4 to 32 profiles per device, actually using them can be quite inconvenient. This App attempts to alleviate the arguably biggest pain point: The isolation of the file system between profiles, which requires less than optimal methods to bypass such as using USB Sticks, 3rd party Cloud Synchronization, or Messaging Apps to move files between profiles.
 
 <a href="./metadata/en-US/images/phoneScreenshots/screenshot-main-activity.png" target="_blank"><img src="./metadata/en-US/images/phoneScreenshots/screenshot-main-activity.png" width="270"></a>
 <a href="./metadata/en-US/images/phoneScreenshots/screenshot-settings-activity.png" target="_blank"><img src="./metadata/en-US/images/phoneScreenshots/screenshot-settings-activity.png" width="270"></a>
@@ -20,12 +20,14 @@ If you haven't, allow *multiple users* on your device by going into *Settings &r
 
 Install this App within each profile that you want to share data with (no way around this, sorry). If you begin by installing this App within the Owner profile, you can easily install it into other profiles via *Install available apps* when editing a User.
 
+## Security
+
 ### Permissions
 
 * **Network**: When installing new applications on GrapheneOS, you'll be asked whether to allow it the *Network* permission. Although this App never connects to the Internet, it still requires this permission as its inter-profile communication depends on connecting over localhost (127.0.0.1).
 * **Notifications**: This App makes use of notifications to inform you about information being shared by another User Profile. In fact, there's no UI from which you could obtain shared information other than notifications. This is why they're required. The App will never post any spam notifications unrelated to the information you're sharing.
-* **Foreground Service**: The App will automatically obtain this permission on installation, allowing it to serve shared information without getting killed by the system to save battery. Foreground Services are only used by this App while data is explicitly being shared. The user has full control over the running Service via a pinned notification.
-* **Clipboard Write**: The App will automatically obtain this permission on installation, allowing it to write to the clipboard. In fact it even reads your clipboard, but it only ever does so when you click buttons explicitly stating this as a fact. This is used to conveniently share clipboard contents between User Profiles.
+* **Foreground Service**: The App will automatically obtain this permission upon installation, allowing it to serve shared information without getting killed by the system to save battery. Foreground Services are only used by this App while data is explicitly being shared. The user has full control over the running Service via a pinned notification.
+* **Clipboard Write**: The App will automatically obtain this permission upon installation, allowing it to write to the clipboard. In fact, it even reads your clipboard, but it only ever does so when you click buttons explicitly stating this as a fact. This is used to conveniently share clipboard contents between User Profiles.
 
 ### Encryption
 
@@ -33,7 +35,27 @@ You can instantly start sharing files between profiles after installation, but i
 
 This feature is arguably paranoid. For another application to access information shared through this App, it would need to be explicitly programmed to do so. Enabling encryption will make data transfers slower, possibly less reliable, but it will certainly prevent such malicious Apps from accessing what you're sharing without your permission. Assuming you chose a nice, long password, that is.
 
+### Download and Verification
+
+The App's installation packages (APK files) can be found on the [Releases](https://github.com/VentralDigital/InterProfileSharing/releases) page. The .apk file can be downloaded and installed using your phone's browser. It may ask you to enable App installations from 3rd party sources first.
+
+If you want to be sure you actually downloaded the real thing, you can first check whether the SHA-256 hash specified in the release matches with what the `sha256sum` command outputs locally. The APKs are built within an isolated development environment and signed therein. To verify the signature you can run the following command: 
+
+```bash
+apksigner verify --print-certs ips-1.0.apk | grep SHA-256
+```
+
+The output should match `03243d0c0d44b6e0b41e3cb245b1dc269be4c3ffe177f843fc005bc4ea0c7426`
+
 ## Troubleshooting
+
+#### Android won't let me install the App
+
+If you're attempting installation within a secondary User Profile it may be that you have disabled *"App installs and Updates"* for the current user. You can change this setting from the Owner profile at *Settings &raquo; System &raquo; Users*. If you're downloading it from your phone's browser, you may need to go into the App's settings and toggle on *"Allow from this source"* within the *Advanced* option called *"Install unknown apps"* found at *Settings &raquo; Apps &raquo; Your Browser App*. If the App is already installed on the device, even if it's in another user, the issue might stem from the APK files coming from different sources. You either need to re-download it from the same source as the first time, or uninstall the other version before installing the new one.
+
+Android App installations are "Trust On First Use" (TOFU), meaning that the Android system will simply trust you to download and install a non-malicious package. The first package installation comes with a signature, based on which future installations (for updating the App, or re-installation within other user profiles) will be verified by. Depending on where you download the package from though, it may be that the App Store platform replaced the signature with their own.
+
+The F-Droid store normally builds APK files from source and signs them with their own key. Because of TOFU this causes issues when Apps are installed from one source and updated from another. This App makes use of F-Droid's [Reproducible Builds](https://f-droid.org/en/docs/Reproducible_Builds/) feature, where, after they built the App from source, they compare it with the developer-signed APK file from the Releases page on GitHub. If they are equivalent, F-Droid publishes the official APK App instead, to prevent TOFU issues. 
 
 #### I'm sharing something but I get no notification about it in the other profile
 
@@ -45,7 +67,9 @@ Note that the App can only communicate with itself in another profile, if they a
 
 #### The file I'm attempting to share keeps failing to download in the other profile
 
-Most likely this happens because your file is very large. If you're using encryption, it might be worth temporarily disabling it for transferring large files.
+Have you checked whether the foreground service is actually still running after switching profiles? It might be that the notifications for new shared files appeared when you initially shared the files, but later the sharing service was stopped. This causes the notification about the shared file to remain, but the file itself is no longer available for transfer. See [above for solutions](#im-sharing-something-but-i-get-no-notification-about-it-in-the-other-profile).
+
+This might also happen because your file is very large. If you're using encryption, it might be worth temporarily disabling it for transferring large files.
 
 #### When I attempt to share something, the notification about it being shared immediately disappears again
 
@@ -94,3 +118,42 @@ Checks for new items are skipped when (1) a check already was already triggered 
 Most of the other client logic is attempting to create pretty notifications for the information shared by another profile, and handling user interactions with these notifications.
 
 If the user desires to do something with a shared file, it will always first be added to the Downloads folder. The App does not make use of any temporary directories or caches.
+
+## Development & Translation
+
+### Contribution
+
+If you're looking to contribute changes to the code, I recommend locally cloning a fork of this repository and importing the project into AndroidStudio. If you're looking to contribute additions or corrections to the translations, you can use AndroidStudio as well, or just edit the raw translation files (If you don't understand the file format, try pasting them into ChatGPT and translate it with its help). The default language is `en-US` and texts from within the App are located at [`/app/src/main/res`](https://github.com/VentralDigital/InterProfileSharing/tree/main/app/src/main/res) within the `values` folders. Texts for App Stores are located in the [`/metadata`](https://github.com/VentralDigital/InterProfileSharing/tree/main/metadata) directory. After you've finished working on your changes, create a Pull Request into this repositories main branch. If all of this is too complicated, feel free to just [create an issue](https://github.com/VentralDigital/InterProfileSharing/issues/new) instead.
+
+### Building & Signing a Release
+
+First, increase `versionName` (eg. from 1.0 to 1.1) and `versionCode` (eg. from 1 to 2) within [`/app/build.gradle.kts`](https://github.com/VentralDigital/InterProfileSharing/blob/main/app/build.gradle.kts#L15-L16). Create a new changelog file `${versionCode}.txt` within [`/metadata/en-US/changelogs`](https://github.com/VentralDigital/InterProfileSharing/tree/main/metadata/en-US/changelogs).
+
+Within the repository, execute the following commands to create a new build. Do NOT create a build from AndroidStudio, as this will likely not result in a [Reproducible Build](https://f-droid.org/en/docs/Reproducible_Builds/).
+
+```bash
+apt-get update && apt-get install -y librsvg2-bin openjdk-17-jdk-headless
+update-alternatives --auto java
+./gradlew assembleRelease
+```
+
+Next, sign the built APK file:
+
+```bash
+apksigner sign --ks path/to/your/keystore.jks --out signed.apk ./app/build/outputs/apk/release/app-release-unsigned.apk
+```
+
+Verify the signature, output should match `03243d0c0d44b6e0b41e3cb245b1dc269be4c3ffe177f843fc005bc4ea0c7426`
+
+```bash
+apksigner verify --print-certs app-release.apk | grep SHA-256
+```
+
+When creating a new release on GitHub, make sure that
+- The release title exactly matches `versionName`
+- The release creates a new tag, exactly matching `v${versionName}`
+- The APK's file name exactly matches `ips-${versionName}.apk`
+
+The [App's metadata in F-Droids repository](https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/digital.ventral.ips.yml) is set to watch for new Git tags matching this pattern with binaries located at `https://github.com/VentralDigital/InterProfileSharing/releases/download/v%v/ips-%v.apk` (where `%v` is `versionName` and `%c` is `versionCode`)
+
+To ensure builds are reproducible, the release tag should be exactly point to the state of the repository when the APK file was built. This will ensure that APK files rebuild based on the tag alone will match with the APK file specified in the release.
