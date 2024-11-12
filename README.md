@@ -127,6 +127,8 @@ If you're looking to contribute changes to the code, I recommend locally cloning
 
 ### Building & Signing a Release
 
+#### F-Droid
+
 First, increase `versionName` (eg. from 1.0 to 1.1) and `versionCode` (eg. from 1 to 2) within [`/app/build.gradle.kts`](https://github.com/VentralDigital/InterProfileSharing/blob/main/app/build.gradle.kts#L15-L16). Create a new changelog file `${versionCode}.txt` within [`/metadata/en-US/changelogs`](https://github.com/VentralDigital/InterProfileSharing/tree/main/metadata/en-US/changelogs).
 
 Within the repository, execute the following commands to create a new build. Do NOT create a build from AndroidStudio, as this will likely not result in a [Reproducible Build](https://f-droid.org/en/docs/Reproducible_Builds/).
@@ -157,3 +159,26 @@ When creating a new release on GitHub, make sure that
 The [App's metadata in F-Droids repository](https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/digital.ventral.ips.yml) is set to watch for new Git tags matching this pattern with binaries located at `https://github.com/VentralDigital/InterProfileSharing/releases/download/v%v/ips-%v.apk` (where `%v` is `versionName` and `%c` is `versionCode`)
 
 To ensure builds are reproducible, the release tag should be exactly point to the state of the repository when the APK file was built. This will ensure that APK files rebuild based on the tag alone will match with the APK file specified in the release.
+
+#### Play Store
+
+The Google Play Store requires App Bundles (.aab) files instead of APKs. The commands are different, but the process is the same: We build, sign, and verify:
+
+```bash
+./gradlew bundleRelease
+jarsigner -keystore path/to/your/keystore.jks app/build/outputs/bundle/release/app-release.aab key0
+keytool -printcert -jarfile app/build/outputs/bundle/release/app-release.aab
+```
+
+In this case the `app-release.aab` file has been directly replaced with its signed version.
+
+#### Accrescent
+
+Accrescent requires an "APK Set" (a set of split APKs), which are .apks files. They are generated from AABs using the [`bundletool`](https://github.com/google/bundletool/releases):
+
+```bash
+java -jar bundletool-all-1.17.2.jar build-apks --bundle=app/build/outputs/bundle/release/app-release.aab --output=signed.apks --ks=path/to/your/keystore.jks --ks-key-alias=key0
+unzip signed.apks -d extracted_signed_apks
+find extracted_signed_apks/splits -name "*.apk" -exec apksigner verify --print-certs {} \; | grep SHA-256
+rm -rf extracted_signed_apks
+```
